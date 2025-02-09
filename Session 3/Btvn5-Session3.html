@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="https://www.myserver.com" method="post">
+        <label for="fullname">Họ và tên</label>
+        <input type="text" name="fullname" id="fullname">
+        <br/>
+
+        <label for="date">Chọn ngày giờ</label>
+        <input type="datetime-local" name="date" id="date">
+        <br/>
+
+        <label for="service">Chọn loại dịch vụ</label>
+        <select name="service" id="service">
+            <option value="Tư vấn">Tư vấn</option>
+            <option value="Chăm sóc khách hàng">Chăm sóc khách hàng</option>
+        </select>
+        <br/>
+
+        <label for="note">Ghi chú</label>
+        <textarea name="note" id="note"></textarea>
+        <br/>
+        <button>Đặt lịch</button>
+    </form>
+</body>
+</html>

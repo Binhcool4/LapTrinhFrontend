@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="https://www.myserver.com" method="post">
+        <table>
+            <tr>
+                <td><label for="fullname">Họ và tên:</label></td>
+                <td><input type="text" name="fullname" id="fullname"></td>
+            </tr>
+
+            <tr>
+                <td><label for="date">Ngày sinh:</label></td>
+                <td><input type="date" name="date" id="date"></td>
+            </tr>
+
+            <tr>
+                <td><label for="gender">Giới tính:</label></td>
+                <td>
+                    <input type="radio" name="gender" value="nam">Nam
+                    <input type="radio" name="gender" value="nữ">Nữ
+                </td>
+            </tr>
+
+            <tr>
+                <td><label for="phonenumber"></label>Số điện thoại:</td>
+                <td><input type="tel" name="phonenumber" id="phonenumber" maxlength="10"></td>
+            </tr>
+
+            <tr>
+                <td><label for="email">Email:</label></td>
+                <td><input type="email" name="email" id="email"></td>
+            </tr>  
+
+            <tr>
+                <td><label for="company">Tên công ty:</label></td>
+                <td><input type="text" name="company" id="company"></td>
+            </tr>
+
+            <tr>
+                <td><label for="role">Vai trò trong công ty:</label></td>
+                <td><select name="role" id="role" style="width: 300px;">
+                    <option value="CEO">Giám đốc điều hành(CEO)</option>
+                    <option value="phó giám đóc">phó giám đóc</option>
+                    <option value="Trưởng phòng">Trưởng phòng</option>
+                    <option value="Nhân viên">Nhân viên</option>
+                </select></td>
+            </tr>
+
+            <tr>
+                <td><label for="scale">Quy mô công ty:</label></td>
+                <td><select name="scale" id="scale">
+                    <option value="nhỏ">Doanh nghiệp nhỏ</option>
+                    <option value="vừa">Doanh nghiệp vừa</option>
+                    <option value="lớn">Doanh nghiệp lớn</option>
+                </select></td>
+            </tr>
+
+            <tr>
+                <td><label for="profession">Ngành nghề công ty:</label></td>
+                <td><input type="text" name="profession" id="profession" style="width: 135px;"></td>
+            </tr>
+
+            <tr>
+                <td><label for="reason">Lý do tham gia câu lạc bộ:</label></td>
+                <td><textarea name="reason" id="reason"></textarea></td>
+            </tr>
+
+            <tr>
+                <td><label for="experience">Kinh nghiệm lãnh đạo:</label></td>
+                <td><textarea name="experience" id="experience"></textarea></td>
+            </tr>
+
+            <tr>
+                <td><label for="target">Mục tiêu khi tham gia câu lạc bộ:</label></td>
+                <td><textarea name="target" id="target"></textarea></td>
+            </tr>
+
+            <tr>
+                <td><label for="desire">Chương trình sự kiện mong muốn tham gia:</label></td>
+                <td>
+                    <input type="checkbox" name="desire" value="Networking">Networking
+                    <input type="checkbox" name="desire" value="Workshops">Workshops
+                    <input type="checkbox" name="desire" value="Hội thảo">Hội thảo
+                </td>
+            </tr>
+
+            <tr>
+                <td><label for="Notification">Đăng ký nhận bản tin:</label></td>
+                <td><input type="checkbox" name="Notification" value="Có">Có</td>
+            </tr>
+
+            <tr>
+                <td><button>Đăng kí hội viên</button></td>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>
