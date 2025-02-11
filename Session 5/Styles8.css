@@ -1,0 +1,27 @@
+table{
+    padding-top:10px;
+    padding-bottom: 10px;
+}
+
+.top {
+    border-top: 5px dashed #8c8c8c; 
+    width: 100%; 
+    margin: 10px 0;
+}
+
+img {
+    border-radius: 30px;
+    padding-left: 10px;
+}
+
+.border{
+    border-right: 1px solid grey;
+}
+
+.gray {
+    color: gray;
+}
+
+.caption {
+    font-weight: bolder;
+}

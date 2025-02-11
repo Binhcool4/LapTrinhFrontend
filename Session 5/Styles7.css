@@ -1,0 +1,46 @@
+h2 {
+    text-align: center;
+    color: darkblue;
+    font-size: 30px;
+}
+
+table, th, td {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 30px;
+    padding-right: 30px;
+    border-spacing: 5px;
+    border-collapse: collapse;
+    text-align: center;
+    border-color: rgb(227, 222, 222);
+}
+
+th {
+    color: white;
+    background-color: cornflowerblue;
+}
+
+.color {
+    background-color: rgb(213, 209, 209);
+}
+
+.button-green {
+    color: white;
+    background: #2dba4e;
+    border:none ;
+    padding: 7px ;
+}
+
+.button-yellow {
+    color: black;
+    background: rgb(255, 213, 0);
+    border: none;
+    padding: 7px ;
+}
+
+.button-red {
+    color: white;
+    background: red;
+    border:none ;
+    padding: 7px ;
+}

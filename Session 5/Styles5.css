@@ -1,0 +1,16 @@
+h3 {
+  color:deepskyblue;
+}
+
+.container {
+    border: none;
+    background-color:lightgoldenrodyellow;
+    padding-left: 1px;
+    padding-bottom: 1px;
+  }
+
+.child{
+    border-left: 10px solid rgb(241, 178, 19);
+    padding: 5px;
+}
+

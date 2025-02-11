@@ -1,0 +1,25 @@
+h2 {
+    text-align: center;
+    color: darkblue;
+    font-size: larger;
+}
+
+table, th, td {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 30px;
+    padding-right: 30px;
+    border-spacing: 5px;
+    border-collapse: collapse;
+    text-align: center;
+    border-color: rgb(227, 222, 222);
+}
+
+th {
+    color: white;
+    background-color: cornflowerblue;
+}
+
+.color {
+    background-color: rgb(213, 209, 209);
+}

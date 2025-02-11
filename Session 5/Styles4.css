@@ -1,0 +1,24 @@
+p {
+    color: rgb(107, 105, 105);
+}
+
+.Cine {
+    color: midnightblue;
+}
+
+.img {
+    padding-right: 40px;
+}
+
+.caption {
+    font-size: 24px;
+    font-weight: 700;
+}
+
+.text {
+    padding-bottom: 110px;
+}
+
+.time {
+    color: darkgrey;
+}

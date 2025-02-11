@@ -1,0 +1,51 @@
+.text {
+    color:lightcoral;
+    background-color:rgb(242, 242, 242);
+}
+
+table, tr, td {
+    text-align: center;
+    border-collapse: collapse;
+    height: 80px;
+    width: 900px;
+    border-color: green;
+    border: 3px solid green;
+}
+
+.container {
+    border: 1px solid #e9e9e9;
+    border-radius: 10px;
+    background-color: #e9e9e9;
+    width: 950px;
+    padding-left: 20px;
+    padding-bottom: 20px;
+}
+
+.child{
+    background-color: white;
+    border-left: 3px solid green;
+    padding: 3px;
+    width: 900px;
+}
+
+.text-center {
+    color: brown;
+}
+
+.text-red {
+    color: red;
+}
+
+.text-blue {
+    color: blue;
+}
+
+.button{
+    background-color:rgb(27, 179, 100);
+    border: none;
+    border-radius: 5px;
+    color: white;
+    width: 130px;
+    height: 30px;
+    margin-top: 10px;
+}
