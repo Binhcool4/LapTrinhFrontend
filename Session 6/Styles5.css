@@ -1,0 +1,49 @@
+.caption {
+    color: white;
+    background-color:rgb(48, 187, 48) ;
+    height: 100px;
+    padding-right: 50px;
+    width: 1484px;
+}
+
+.spacing {
+    padding-left: 900px;
+}
+
+td {
+    padding-right: 70px;
+}
+
+.table {
+    background-color: rgb(227, 226, 226);
+    width: 1484px;
+    height: 400px;
+}
+
+.button-green {
+    border-radius: 4px;
+    height: 35px;
+    border: none;
+    background-color: rgb(48, 187, 48);
+    color: white;
+}
+
+.table-button {
+    padding-top: 40px;
+    padding-left: 20px;
+    padding-bottom: 40px;
+}
+
+.button-feature {
+    font-size: medium;
+    background-color: rgb(189, 186, 186);
+    height: 50px;
+    width: 420px;
+    border-radius: 4px;
+}
+
+.contact {
+    background-color: rgb(42, 42, 42);
+    width: 1488px;
+    color: white;
+}

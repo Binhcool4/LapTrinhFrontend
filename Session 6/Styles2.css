@@ -1,0 +1,36 @@
+* {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.container {
+    border: none;
+    background-color:rgb(232, 228, 228);
+    padding-left: 1px;
+    padding-top: 15px;
+    padding-bottom: 20px;
+    width: 300px;
+    border-radius: 8px;
+}
+
+th {
+    font-size: 25px;
+    padding-bottom: 10px;
+}
+
+label {
+    font-weight: 600;
+}
+
+input {
+    height: 30px;
+    border-radius: 8px;
+}
+
+button {
+    text-align: center;
+    height: 38px;
+    width: 170px;
+    border-radius: 8px;
+    color: white;
+    background-color: dodgerblue;
+}

@@ -1,0 +1,45 @@
+div {
+    text-align: center;
+    color: white;
+    background-color:rgb(48, 187, 48);
+    padding-top: 20px;
+    padding: 7px;
+}
+
+th {
+    padding-left: 12px;
+}
+
+a {
+    color: blue;
+}
+
+.table {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 10px;
+}
+
+.container {
+    border: 1px solid rgb(196, 194, 194);
+    background-color:rgb(227, 226, 226);
+    padding-left: 1px;
+    padding-bottom: 1px;
+    width: 450px;
+    padding-bottom: 600px;
+}
+
+.border {
+    border-bottom: 2px solid rgb(196, 194, 194);
+    width: 1450px;
+}
+
+.text {
+    padding-left: 40px;
+}
+
+.contact {
+    background-color: rgb(42, 42, 42);
+    width: 1450px;
+    color: white;
+}
