@@ -1,0 +1,40 @@
+* {
+    font-family: 'Open Sans';
+}
+
+h1 {
+    border-left: 8px solid orange;
+    padding-left: 10px;
+}
+
+div {
+    position: relative;
+    display: inline-block;
+}
+
+.caption {
+    position: absolute;
+    top: 90%;
+    left: 50%;
+    width: 500px;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+table {
+    padding-top: 20px;
+    font-size: medium;
+    font-weight: 650;
+    width: 400px;
+}
+
+.new {
+    padding-bottom: 10px;
+    border-bottom: 1px solid rgb(122, 126, 130);
+}
+
+.news {
+    padding-top: 20px;
+}

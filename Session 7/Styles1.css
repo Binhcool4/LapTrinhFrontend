@@ -1,0 +1,47 @@
+* {
+    font-family: 'Open Sans';
+    color: #231751;
+}
+
+.caption {
+    width: 559px;
+    font-size: 30px;
+    font-weight: 700;
+}
+
+table {
+    background-color: aliceblue;
+    padding-top: 10px;
+    padding-left: 10px;
+}
+
+img {
+    padding-right: 10px;
+}
+
+.table-button {
+    width: 559px;
+    padding-top: 8px;
+}
+
+.button-red {
+    border: none;
+    border-radius: 10px;
+    background-color: red;
+    color: white;
+    height: 40px;
+    padding-left: 10px;
+    margin-right: 10px;
+    text-align: center;
+}
+
+.button {
+    border: 1px solid rgb(190, 195, 200);
+    border-radius: 10px;
+    height: 25px;
+    color: #231751;
+    margin-right: 250px;
+    padding: 10px;
+    padding-bottom: 30px;
+    text-align: center;
+}

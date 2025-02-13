@@ -1,0 +1,77 @@
+body {
+    font-family: 'Open Sans';
+    text-align: center;
+    padding: 0px;
+    margin: 0px;
+}
+
+.table {
+    border: 1px solid;
+    border-radius: 15px;
+    padding: 0px;
+    width: 350px;
+    height: 700px;
+    line-height: 2;
+    margin-top: 90px;
+    margin-left: 700px;
+    position: relative;
+}
+
+.caption {
+    background-color: hsl(352.32deg 85.43% 51.57%);
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    font-size: 15px;
+    font-weight: bold;
+    width: 100%;
+    position: relative;
+    border-top-left-radius:12px ;
+    border-top-right-radius:12px ;
+}
+
+p {
+    transform: rotate(-10deg);
+    position: absolute;
+    bottom: 50%;
+    left: 90%;
+}
+
+.line {
+    margin: 0px 35px;
+}
+
+hr {
+    margin: 8px 20px;
+}
+
+.text-gray {
+    font-weight: bold;
+    color: gray;
+}
+
+.text-orange {
+    font-weight: bold;
+    color: orange;
+}
+
+.button-resign {
+    height: 50px;
+    width: 240px;
+    font-size: 18px;
+    border-radius: 50px;
+    background-color: hsl(352.32deg 85.43% 51.57%);
+    color: white;
+    border: 0px solid;
+    margin-top: 15px;
+}
+
+.button-detail {
+    background-color: white;
+    color:  hsl(352.32deg 85.43% 51.57%);
+    border: solid hsl(352.32deg 85.43% 51.57%);
+    border-radius: 50px;
+    margin-top: 15px;
+    width: 150px;
+    height: 45px;
+}

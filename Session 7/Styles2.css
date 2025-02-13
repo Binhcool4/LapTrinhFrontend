@@ -1,0 +1,32 @@
+* {
+    font-family: 'Open Sans';
+}
+
+.container {
+    border: none;
+    background-color:aliceblue;
+    padding-left: 40px;
+    padding-bottom: 20px;
+    padding-top: 20px;
+    width: 1300px;
+    height: 200px;
+}
+
+table {
+    border: 3px solid rgb(170, 176, 181);
+    background-color: white;
+    border-radius: 4px; 
+    margin-right: 20px;
+    width: 300px;
+}
+
+h2 {
+    color: red;
+    text-align: center;
+}
+
+p {
+    text-align: center;
+    color: #231751;
+}
+
