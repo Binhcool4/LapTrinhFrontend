@@ -1,0 +1,44 @@
+div {
+    font-family: 'Open Sans';
+}
+
+.border {
+    border-collapse: separate;
+    border-right: 1px solid rgb(181 181 183);
+}
+
+h1 {
+    border-bottom: 2px solid red;
+    width: 230px;
+    margin-left: 53px;
+    margin-bottom: 50px;
+    padding-bottom: 15px;
+}
+
+.img {
+    border-radius: 50%;
+    padding-right: 50px;
+    padding-left: 50px;
+}
+
+p {
+    border-radius: 5px;
+    padding-left: 50px;
+    padding-bottom: 10px;
+    width: 200px;
+}
+
+.text-gray {
+    color: rgb(181 181 183);
+}
+
+button {
+    border: 3px solid rgb(246 125 125);
+    background-color: white;
+    color: rgb(246 125 125);
+    font-weight: 700;
+    margin-left: 50px;
+    text-align: center;
+    padding: 10px;
+    width: 100px;
+}

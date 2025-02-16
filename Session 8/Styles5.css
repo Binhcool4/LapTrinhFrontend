@@ -1,0 +1,76 @@
+* {
+    text-align: center;
+    font-family: 'Roboto';
+}
+
+.container {
+    background-color: white;
+    max-width: 600px;
+    text-align: center;
+    margin: 20px;
+    margin-top: 50px;
+    margin-left: 400px;
+}
+
+h2 {
+    color: rgb(167, 165, 165);
+}
+
+p {
+    color: rgb(167, 165, 165);
+}
+
+hr {
+    width: 50px;
+}
+
+.button {
+    padding: 20px;
+}
+
+.button-blue {
+    color: white;
+    background-color: rgb(70 150 229);
+    border: none;
+    border-radius: 5px;
+    text-align: center;
+    padding: 10px;
+    padding-left: 22px;
+    padding-right: 22px;
+    margin-right: 15px;
+}
+
+.button-gray {
+    color: rgb(167, 165, 165);
+    font-weight: 500;
+    background-color: white;
+    border: 1px solid rgb(167, 165, 165);
+    border-radius: 5px;
+    text-align: center;
+    padding: 10px;
+    padding-left: 22px;
+    padding-right: 22px;
+}
+
+.bottom {
+    background-color: rgb(247 247 247);
+}
+
+.icon {
+    padding: 50px;
+    font-size: 35px;
+    color: rgb(167, 165, 165);
+}
+
+.fa-brands {
+    margin-right: 15px;
+}
+
+.contact {
+    padding-bottom: 50px;
+}
+
+a {
+    color: rgb(167, 165, 165);
+}
+

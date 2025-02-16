@@ -1,0 +1,51 @@
+.container {
+    border: none;
+    background-color:rgb(80 64 94);
+    padding-left: 40px;
+    padding-bottom: 20px;
+    padding-top: 30px;
+    width: 500px;
+    height: 250px;
+    margin-top: 100px;
+    margin-left: 450px;
+}
+
+table {
+    color: rgb(215 211 218);
+    font-weight: 500;
+    font-size: large;
+}
+
+.email {
+    padding-left: 52px;
+}
+
+input {
+    background-color: rgb(80 64 94);
+    border: 1px solid rgb(215 211 218);
+    border-radius: 5px;
+    height: 30px;
+    width: 180px;
+}
+
+textarea {
+    background-color: rgb(80 64 94);
+    border: 1px solid rgb(215 211 218);
+    border-radius: 6px;
+    padding-bottom: 50px;
+    width: 420px;
+}
+
+button {
+    margin-bottom: 25px;
+    margin-left: 2px;
+    margin-right: 10px;
+    margin-top: 20px;
+    background-color:white;
+    border: 1px solid rgb(80 64 94);
+    height: 30px;
+    border-radius: 7px;
+    padding: 15px;
+    padding-bottom: 30px;
+    text-align: center;
+}
