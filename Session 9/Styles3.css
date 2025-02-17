@@ -1,0 +1,43 @@
+.container {
+    border: 3px solid black;
+    width: 900px;
+    padding: 10px 8px;
+    margin-top: 200px;
+    margin-left: 200px;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    margin-right: 50%;
+}
+
+.child {
+    background-color: rgb(52 152 219);
+    color: white;
+    text-align:center;
+    width: 30vh;
+    height: 5vh;
+    padding-top: 14px;
+    border-radius: 5px;
+}
+
+.child-special {
+    margin-top: 5px;
+    background-color: rgb(52 152 219);
+    color: white;
+    text-align:center;
+    width: 60.5vh;
+    height: 5vh;
+    padding-top: 14px;
+    border-radius: 5px;
+}
+
+.child-second {
+    margin-top: 5px;
+    background-color: rgb(52 152 219);
+    color: white;
+    text-align:center;
+    width: 30vh;
+    height: 5vh;
+    padding-top: 14px;
+    border-radius: 5px;
+}

@@ -1,0 +1,32 @@
+.container {
+    border: 3px solid black;
+    width: 700px;
+    padding: 10px 8px;
+    margin-top: 200px;
+    margin-left: 200px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-right: 50%;
+}
+
+.child {
+    background-color: purple;
+    color: white;
+    text-align:center;
+    width: 15vh;
+    height: 5vh;
+    padding-top: 14px;
+    border-radius: 10px;
+}
+
+.child-second {
+    margin-top: 5px;
+    background-color: purple;
+    color: white;
+    text-align:center;
+    width: 15vh;
+    height: 5vh;
+    padding-top: 14px;
+    border-radius: 10px;
+}

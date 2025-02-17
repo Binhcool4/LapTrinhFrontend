@@ -1,0 +1,19 @@
+.container {
+    border: 3px solid black;
+    background-color: rgb(190, 187, 187);
+    height: 300px;
+    margin-top: 200px;
+    margin-right: 600px;
+    padding-bottom: 100px;
+    display: flex;
+    justify-content: center;
+}
+
+.block {
+    background-color: cornflowerblue;
+    color: white;
+    margin: 160px;
+    width: 100px;
+    height: 100px;
+    text-align: center;
+}
