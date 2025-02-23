@@ -1,0 +1,53 @@
+.navbar-custom {
+    background-color: white;
+}
+
+.navbar-custom .navbar-brand,
+.navbar-custom .navbar-nav .nav-link {
+    color: black;
+}
+
+.navbar-custom .navbar-brand:hover,
+.navbar-custom .navbar-nav .nav-link:hover {
+    color: #ffcc00;
+}
+
+.navbar-nav .nav-item {
+    margin-right: 20px;
+}
+
+.navbar-nav .nav-item:last-child {
+    margin-right: 0;
+}
+
+.icon-buttons i {
+    color: black;
+    margin-left: 15px;
+    font-size: 20px;
+}
+
+.icon-buttons i:hover {
+    color: #ffcc00;
+}
+
+.search-container {
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+    width: 100%; 
+    max-width: 600px; 
+    margin-left: auto;
+    margin-right: auto; 
+}
+
+.search {
+    width: 100%; 
+    max-width: 400px; 
+    padding: 10px; 
+}
+
+.search-container button {
+    padding: 10px 20px; 
+    margin-left: 10px; 
+}
+
