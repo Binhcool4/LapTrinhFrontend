@@ -1,9 +1,9 @@
-function findMaxAndPosition(arr) {
+function findMax(arr) {
     if (!Array.isArray(arr)) {
         console.log("Dữ liệu không hợp lệ");
         return;
     }
-    
+
     if (arr.length === 0) {
         console.log("Mảng không có dữ liệu");
         return;
@@ -18,4 +18,4 @@ function findMaxAndPosition(arr) {
     console.log(`max = ${max}`);
     console.log(`position = ${position}`);
 }
-findMaxAndPosition([10, 9, 5, 11, 24, 5]);
+findMax([10, 9, 5, 11, 24, 5]);

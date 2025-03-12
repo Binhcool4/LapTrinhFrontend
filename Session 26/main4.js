@@ -10,14 +10,14 @@ function isPrime(n) {
     }
     return true;
 }
-function checkPrimes(arr) {
+function checkPrime(arr) {
     if (!Array.isArray(arr)){
          return "Dữ liệu không hợp lệ";
     }
-    
+
     if (arr.length === 0){
         return "Mảng không có phần tử nào"; 
     } 
     return arr.filter(isPrime);
 }
-console.log(checkPrimes([1, 2, 3, 4, 5, 6, 7, 8, 9, 10]));
+console.log(checkPrime([1, 2, 3, 4, 5, 6, 7, 8, 9, 10]));
