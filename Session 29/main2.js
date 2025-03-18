@@ -111,7 +111,7 @@ do {
             deleteProduct();
             break;
         case 6:
-            
+            filterProduct();
             break;
         case 7:
             console.log("Thoát chương trình");
