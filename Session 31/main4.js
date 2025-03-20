@@ -9,10 +9,3 @@ openModalBtn.addEventListener('click', () => {
 closeModalBtn.addEventListener('click', () => {
     modalContainer.style.display = 'none';
 });
-
-// Đóng modal khi click ra ngoài
-// modalContainer.addEventListener('click', (event) => {
-//     if (event.target === modalContainer) {
-//         modalContainer.style.display = 'none';
-//     }
-// });
