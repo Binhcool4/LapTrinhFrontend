@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./Styles5.css">
+</head>
+<body>
+    <div id="myDIV" class="header">
+        <h1 style="margin: 20px 5px">To-Do List K24_PTIT</h1>
+        <div class="header1">
+            <input type="text" name="" id="myInput" placeholder="Nhập nhiệm vụ..." style="height: 30px;">
+            <button class="addBtn" onclick="addTask()">Thêm</button>
+            <ul id="myUL"></ul>
+        </div>
+    </div>
+    
+
+    <script>
+        let todoList = [
+            {
+                id: 1,
+                task: "hoc dom js",
+                completed: false,
+            },
+            {
+                id: 2,
+                task: "làm bài tập dom",
+                completed: true,
+            },
+        ];
+        let editIndex = -1;
+        function renderTask() {
+            let list = document.getElementById("myUL");
+            list.innerHTML = "";
+            todoList.forEach((item) => {
+                if (item.completed === true) {
+                    list.innerHTML += `<li class="checked">${item.task}
+                        <span class="close" onclick="deleteTask(${item.id})">X</span>
+                    </li>`;
+                } else {
+                list.innerHTML += `<li>${item.task}
+                    <span class="close" onclick="deleteTask(${item.id})">X</span>
+                </li>`;
+                }
+            });
+        }
+        function addTask() {
+            let input = document.getElementById("myInput");
+            let addButton = document.getElementsByClassName("addBtn")[0];
+            if (editIndex === -1) {
+                let newTask = {
+                id: todoList.length !== 0 ? todoList[todoList.length - 1].id + 1 : 1,
+                task: input.value,
+                completed: false,
+                };
+                //B3: thêm đối tượng vừa tạo vào mảng dữ liệu
+                todoList.push(newTask);
+            } else {
+                todoList[editIndex].task = input.value;
+                editIndex = -1;
+                addButton.innerText = "Add";
+            }
+            //B4: Gọi hàm renderTask()
+            renderTask();
+            //B5: Xoá trắng ô input
+            input.value = "";
+        }
+
+        function deleteTask(id) {
+            //B1: Tìm đến task có id trùng với giá trị đối số
+            //B2: Tiến hành xoá phần tử đó
+            todoList = todoList.filter((item) => item.id !== id);
+            //B3: Gọi hàm renderTask()
+            renderTask();
+        }
+        renderTask();
+    </script>
+</body>
+</html>

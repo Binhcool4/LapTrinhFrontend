@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="email" name="" id="email" placeholder="Mời bạn nhập tên email">
+    <br><br>
+    <button onclick="checkEmail()">check</button>
+    <script>
+        function checkEmail() {
+            let email = document.getElementById("email");
+            let emailName = email.value;
+            if (/@.*\.(com|vn)$/.test(emailName)) {
+                alert("Email hợp lệ")
+            } else {
+                alert("Không hợp lệ");
+            }
+            email.value = "";
+        }
+    </script>
+</body>
+</html>

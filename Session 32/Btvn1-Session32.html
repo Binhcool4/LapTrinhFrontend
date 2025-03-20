@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./Styles1.css">
+</head>
+<body>
+    <div id="backgroundDiv">
+        <button id="btn">Đổi màu nền</button>
+    </div>
+
+    <script>
+        let div = document.getElementById("backgroundDiv");
+        let button = document.getElementById("btn");
+        let r = Math.floor(Math.random()*256);
+        let g = Math.floor(Math.random()*256);
+        let b = Math.floor(Math.random()*256);
+        let rgb = `rgb(${r},${g},${b})`;
+        button.onclick = function(){
+            div.style.backgroundColor = `${rgb}`;
+        }
+    </script>
+</body>
+</html>

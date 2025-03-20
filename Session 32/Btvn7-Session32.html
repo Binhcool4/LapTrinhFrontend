@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="container">
+        <img src="https://tools4literature.weebly.com/uploads/3/1/5/6/31568659/alligator_1.jpg?250" alt="" id="pic1">
+        <img src="https://i.pinimg.com/736x/3e/27/e1/3e27e124181e9cc7f388df413d5be4c2.jpg" alt="" height="300" id="pic2">
+        <img src="https://i.pinimg.com/736x/67/4d/96/674d96b920e0a451047d6f16014ffb55.jpg" alt="" height="200" id="pic3">
+    </div>
+
+    <script>
+        let div = document.getElementById("container");
+        let pic1 = document.getElementById("pic1");
+        let pic2 = document.getElementById("pic2");
+        let pic3 = document.getElementById("pic3");
+        pic1.onclick = function(){
+            pic1.style.width = "60%";
+            div.style.textAlign = "center";
+            div.style.backgroundColor = "rgb(216 214 214)";
+            pic2.style.display = "none";
+            pic3.style.display = "none";
+        }
+
+        pic2.onclick = function(){
+            pic2.style.height = "100%";
+            div.style.textAlign = "center";
+            div.style.backgroundColor = "rgb(216 214 214)";
+            pic1.style.display = "none";
+            pic3.style.display = "none";
+        }
+
+        pic3.onclick = function(){
+            pic3.style.height = "100%";
+            div.style.textAlign = "center";
+            div.style.backgroundColor = "rgb(216 214 214)";
+            pic2.style.display = "none";
+            pic1.style.display = "none";
+        }
+
+        div.addEventListener('click', (event) => {
+            if(event.target === div){
+                // Reset lại ảnh
+                pic1.style.display = "inline";
+                pic1.style.width = "";
+                
+                pic2.style.display = "inline";
+                pic2.style.height = "";
+                
+                pic3.style.display = "inline";
+                pic3.style.height = "";
+                
+                // Reset div
+                div.style.textAlign = "";
+                div.style.backgroundColor = "";
+            }
+        })
+    </script>
+</body>
+</html>

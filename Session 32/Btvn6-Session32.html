@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./Styles6.css">
+</head>
+<body>
+    <div>
+        <p></p>
+        <button id="btnIncreaseText">+</button>
+        <button id="btnReduceText">-</button>
+    </div>
+    <script>
+        let size = 16;
+        let p = document.querySelector("p");
+        p.textContent = "Chữ sẽ thay đổi kích thước khi bấm nút"
+        let btn1 = document.getElementById("btnIncreaseText");
+        let btn2 = document.getElementById("btnReduceText");
+        btn1.onclick = function(){
+            p.style.fontSize = `${size++}px`
+        }
+        btn2.onclick = function(){
+            p.style.fontSize = `${size--}px`
+        }
+    </script>
+</body>
+</html>
