@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="productList"></div>
+    <br>
+    <select name="" id="category">
+        <option value="">-- Chọn danh mục --</option>
+        <option value="Đồ ăn">Đồ ăn</option>
+        <option value="Nước">Nước</option>
+        <option value="Dụng cụ">Dụng cụ</option>
+    </select>
+    <button onclick="filterList()">Lọc</button>
+    <div id="filteredList"></div>
+
+    <script>
+        let dishes = [
+            { name: "Rau sạch", category: "Đồ ăn" },
+            { name: "Thịt lợn", category: "Đồ ăn" },
+            { name: "Pepsi không calo", category: "Nước" },
+            { name: "CocaCola", category: "Nước" },
+            { name: "Cờ lê", category: "Dụng cụ" },
+            { name: "Tuy vít", category: "Dụng cụ" }
+        ];
+
+        function displayProducts(list, containerId) {
+            let container = document.getElementById(containerId);
+            container.innerHTML = "";  
+            list.forEach((item) => {
+                let div = document.createElement("div");
+                div.innerHTML = `<li><strong>Tên đồ ăn:</strong> ${item.name} - <strong>Danh mục:</strong> ${item.category}</li>`;
+                container.appendChild(div);
+            });
+        }
+
+        function filterList() {
+            let categoryFilter = document.getElementById("category").value;
+            let filters = dishes.filter((item) => item.category === categoryFilter);
+            displayProducts(filters, "filteredList");
+        }
+        displayProducts(dishes, "productList");
+    </script>
+</body>
+</html>

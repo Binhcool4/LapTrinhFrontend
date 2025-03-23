@@ -1,0 +1,28 @@
+.product-card img {
+    height: 180px;
+    object-fit: cover;
+}
+
+.search-container {
+    display: flex;
+    align-items: center;
+}
+
+.search-container .form-control {
+    flex: 1;
+    border-radius: 5px;
+    border: 1px solid #d6dde4;
+}
+
+.search-container .btn-search {
+    margin-left: 10px;
+    background-color: #198754;
+    color: white;
+    border-radius: 5px;
+    padding: 6px 15px;
+    border: none;
+}
+
+.search-container .btn-search:hover {
+    background-color: #146c43;
+}

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <textarea name="" id="textarea" rows="8" cols="50"></textarea>
+    <p></p>
+    <button onclick="countText()">Kiểm tra</button>
+
+    <script>
+        let textarea = document.getElementById("textarea");
+        let p = document.querySelector("p");
+        let count = 0;
+        p.textContent = `${count} ký tự`
+        function countText() {
+            let str = textarea.value;
+            let wordList = str.split("");
+            let count = wordList.length;
+            p.textContent = `${count} ký tự`
+        }
+    </script>
+</body>
+</html>
