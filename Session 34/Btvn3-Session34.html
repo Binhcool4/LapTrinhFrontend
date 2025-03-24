@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="./Styles3.css">
+</head>
+<body>
+    <div>
+        <form id="loginForm">
+            <h2>Login</h2>
+            <label for="email">Email:</label>
+            <input type="email" name="email" id="email" placeholder="Enter your email address" required>
+            
+            <label for="password">Password:</label>
+            <input type="password" name="password" id="password" placeholder="Enter your password" required>
+            
+            <button type="submit">Login</button>
+
+            <ul>
+                <li><a href="#">Forgot password?</a></li>
+                <li>or</li>
+                <li><a href="#">SignUp</a></li>
+            </ul>
+        </form>
+    </div>
+
+    <script>
+        document.getElementById('loginForm').addEventListener('submit', function(event) {
+            event.preventDefault(); // Ngăn chặn form gửi đi mặc định
+
+            let email = document.getElementById('email').value;
+            let password = document.getElementById('password').value;
+            let users = JSON.parse(localStorage.getItem('users')) || [];
+
+            let userIndex = users.findIndex(user => user.email === email);
+
+            if (userIndex !== -1) {
+                if (users[userIndex].password === password) {
+                    alert("Đăng nhập thành công!");
+                    window.location.href = "index.html"; // Chuyển hướng về trang chính
+                } else {
+                    alert("Sai mật khẩu!");
+                }
+            } else {
+                alert("Email không tồn tại!");
+            }
+        });
+    </script>
+</body>
+</html>

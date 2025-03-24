@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <link rel="stylesheet" href="./Styles1.css">
+</head>
+<body>
+
+    <div class="container">
+        <h1>Register</h1>
+        <label for="email">Email:</label>
+        <input type="email" id="email" placeholder="Enter your email address">
+
+        <label for="password">Password:</label>
+        <input type="password" id="password" placeholder="Enter your password">
+
+        <label for="password1">Confirm Password:</label>
+        <input type="password" id="password1" placeholder="Enter your confirm password">
+
+        <button onclick="checkInformation()">Register</button>
+    </div>
+
+    <script>
+        let email = document.getElementById("email");
+        let password = document.getElementById("password");
+        let confirmPassword = document.getElementById("password1");
+
+        // Lấy danh sách người dùng từ localStorage (nếu có)
+        let users = JSON.parse(localStorage.getItem("user")) || [];
+
+        function checkInformation() {
+            if (!email.value.trim()) {
+                alert("Không được bỏ trống email");
+                return;
+            }
+            if (!password.value.trim()) {
+                alert("Không được bỏ trống mật khẩu");
+                return;
+            }
+            if (!confirmPassword.value.trim()) {
+                alert("Không được bỏ trống xác nhận mật khẩu");
+                return;
+            }
+            
+            // Kiểm tra email đã tồn tại chưa
+            let userExists = users.some(user => user.email === email.value);
+            if (userExists) {
+                alert("Email đã tồn tại!");
+                return;
+            }
+
+            // Kiểm tra mật khẩu có khớp nhau không
+            if (password.value !== confirmPassword.value) {
+                password.style.borderColor = 'red';
+                confirmPassword.style.borderColor = 'red';
+                alert("Mật khẩu không giống nhau!");
+                return;
+            }
+
+            password.style.borderColor = 'green';
+            confirmPassword.style.borderColor = 'green';
+
+            // Lưu user mới vào danh sách
+            users.push({
+                email: email.value,
+                password: password.value
+            });
+
+            localStorage.setItem("user", JSON.stringify(users));
+
+            alert("Đăng ký thành công!");
+        }
+    </script>
+
+</body>
+</html>
