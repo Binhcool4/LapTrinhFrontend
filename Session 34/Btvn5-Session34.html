@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./Styles5.css">
+</head>
+<body>
+    <h2>Danh sách nhân viên Rikkei</h2>
+    <label for="name">Tên nhân viên</label>
+    <input type="text" id="name">
+    <label for="position">Chức vụ</label>
+    <input type="text" id="position"><br><br>
+    <button onclick="addEmployee()">Thêm nhân viên</button>
+    <table>
+        <thead>
+            <tr>
+                <th>STT</th>
+                <th>Tên</th>
+                <th>Chức vụ</th>
+            </tr>
+        </thead>
+        <tbody id="employeeTable">
+
+        </tbody>
+    </table>
+
+    <script>
+        let employees = JSON.parse(localStorage.getItem("employees")) || [];
+        function renderEmployees() {
+            let table = document.getElementById("employeeTable");
+            table.innerHTML = "";
+            employees.forEach((employee, index) => {
+                let row = `<tr>
+                    <td>${index + 1}</td>
+                    <td>${employee.name}</td>
+                    <td>${employee.position}</td>
+                </tr>`;
+                table.innerHTML += row;
+            });
+            localStorage.setItem("employees", JSON.stringify(employees));
+        }
+        function addEmployee() {
+            let name = document.getElementById("name").value;
+            let position = document.getElementById("position").value;
+            if (name === "" || position === "") {
+                alert("Vui lòng nhập đủ thông tin!");
+                return;
+            }
+            employees.push({ name, position });
+            renderEmployees();
+            document.getElementById("name").value = "";
+            document.getElementById("position").value = "";
+        }
+        renderEmployees();
+    </script>
+</body>
+</html>
