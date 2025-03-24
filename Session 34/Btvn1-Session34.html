@@ -44,14 +44,12 @@
                 return;
             }
             
-            // Kiểm tra email đã tồn tại chưa
             let userExists = users.some(user => user.email === email.value);
             if (userExists) {
                 alert("Email đã tồn tại!");
                 return;
             }
 
-            // Kiểm tra mật khẩu có khớp nhau không
             if (password.value !== confirmPassword.value) {
                 password.style.borderColor = 'red';
                 confirmPassword.style.borderColor = 'red';
@@ -62,7 +60,6 @@
             password.style.borderColor = 'green';
             confirmPassword.style.borderColor = 'green';
 
-            // Lưu user mới vào danh sách
             users.push({
                 email: email.value,
                 password: password.value
