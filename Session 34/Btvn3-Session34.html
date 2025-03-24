@@ -28,7 +28,7 @@
 
     <script>
         document.getElementById('loginForm').addEventListener('submit', function(event) {
-            event.preventDefault(); // Ngăn chặn form gửi đi mặc định
+            event.preventDefault(); 
 
             let email = document.getElementById('email').value;
             let password = document.getElementById('password').value;
@@ -39,7 +39,7 @@
             if (userIndex !== -1) {
                 if (users[userIndex].password === password) {
                     alert("Đăng nhập thành công!");
-                    window.location.href = "index.html"; // Chuyển hướng về trang chính
+                    window.location.href = "index.html"; 
                 } else {
                     alert("Sai mật khẩu!");
                 }
