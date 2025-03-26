@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./Styles2.css">
+</head>
+<body>
+    <div class="addBookMark">ADD BOOKMARK</div>
+    <div id="webs-container"></div>
+    
+    <div class="modal" id="bookmarkModal">
+        <div class="modal-content">
+            <p>Add Bookmark <span class="close" onclick="closeModal('bookmarkModal')">&times;</span></p>
+            <form>
+                <label for="webName">Website Name</label><br>
+                <input type="text" id="webName"><br><br>
+                <label for="webURL">Website URL</label><br>
+                <input type="text" id="webURL"><br><br>
+                <button type="button" onclick="addWeb(event)">Save</button>
+            </form>
+        </div>
+    </div>
+
+    <div class="modal" id="confirmDeleteModal">
+        <div class="modal-content">
+            <p>Are you sure you want to delete this bookmark?</p>
+           <form action="" style="display: flex; justify-content: space-around;">
+            <button onclick="closeModal('confirmDeleteModal')">No</button>
+            <button onclick="confirmDelete()">Yes</button>
+           </form>
+        </div>
+    </div>
+
+    <script>
+        let modal = document.getElementById("bookmarkModal");
+        let addBtn = document.querySelector(".addBookMark");
+        let webs = JSON.parse(localStorage.getItem("webs")) || [];
+        let deleteIndex = null;
+
+        addBtn.onclick = () => modal.style.display = "flex";
+
+        function closeModal(modalId) {
+            document.getElementById(modalId).style.display = "none";
+        }
+
+        function renderWebs() {
+            let container = document.getElementById("webs-container");
+            container.innerHTML = "";
+            webs.forEach((item, index) => {
+                container.innerHTML += `<div>${item.webName} <button onclick="showDeleteModal(${index})">Delete</button></div>`;
+            });
+        }
+
+        function addWeb(e) {
+            e.preventDefault();
+            let webName = document.getElementById("webName").value;
+            let webURL = document.getElementById("webURL").value;
+            if (!webName || !webURL) {
+                alert("Vui lòng nhập thông tin hợp lệ.");
+                return;
+            }
+            webs.push({ 
+                webName, 
+                webUrl: webURL
+            });
+            localStorage.setItem("webs", JSON.stringify(webs));
+            document.getElementById("webName").value = "";
+            document.getElementById("webURL").value = "";
+            closeModal('bookmarkModal');
+            renderWebs();
+        }
+
+        function showDeleteModal(index) {
+            deleteIndex = index;
+            document.getElementById("confirmDeleteModal").style.display = "flex";
+        }
+
+        function confirmDelete() {
+            if (deleteIndex !== null) {
+                webs.splice(deleteIndex, 1);
+                localStorage.setItem("webs", JSON.stringify(webs));
+                renderWebs();
+                closeModal('confirmDeleteModal');
+            }
+        }
+        renderWebs();
+    </script>
+</body>
+</html>

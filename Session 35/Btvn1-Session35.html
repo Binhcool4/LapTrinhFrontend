@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 400px;
+            margin: auto;
+            text-align: center;
+        }
+        ul {
+            padding: 0px;
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            background-color: #f4f4f4;
+        }
+        li {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px;
+            border-bottom: 1px solid #ccc;
+        }
+        span {
+            flex-grow: 1;
+            text-align: left;
+            padding-left: 10px;
+        }
+        li div {
+            display: flex;
+            gap: 5px;
+        }
+    </style>
+</head>
+<body>
+    <h1>To-Do List K24</h1>
+    <input type="text" id="input" placeholder="Nhập công việc">
+    <button type="button" id="btn">Thêm</button>
+    <ul id="myUl">
+        
+    </ul>
+
+    <script>
+        // let tasks = [
+        //     {
+        //         id: 1,
+        //         task: "Công việc 1"
+        //     },
+
+        //     {
+        //         id: 2,
+        //         task: "Công việc 2"
+        //     },
+
+        //     {
+        //         id: 3,
+        //         task: "Công việc 3"
+        //     }
+        // ]
+        let tasks = JSON.parse(localStorage.getItem("tasks")) || [];
+
+        function renderTask() {
+            let list = document.getElementById("myUl");
+            list.innerHTML = "";
+            tasks.forEach((item, index) => {
+                list.innerHTML += `
+                <li>
+                    <span>${item.name}</span>
+                    <div>
+                        <button onclick="editTask(${index})">Sửa</button>
+                        <button onclick="deleteTask(${index})">Xóa</button>
+                    </div>
+                </li>`;
+            });
+            localStorage.setItem("tasks", JSON.stringify(tasks));
+        }
+        document.getElementById("btn").addEventListener("click", addTask);
+        function addTask() {
+            let name = document.getElementById("input").value;
+            if (name === "") {
+                alert("Vui lòng nhập công việc!");
+                return;
+            }
+            tasks.push({name});
+            renderTask();
+            document.getElementById("input").value = "";
+        }
+        function editTask(index) {
+            let newName = prompt("Nhập tên mới:", tasks[index].name);
+            if (newName !== null && newName !== "") {
+                tasks[index].name = newName;
+                renderTask();
+            }
+        }
+
+        function deleteTask(index) {
+            if (confirm("Bạn có chắc muốn xóa công việc này?")) {
+                tasks.splice(index, 1);
+                renderTask();
+            }
+        }
+        renderTask();
+    </script>
+</body>
+</html>
