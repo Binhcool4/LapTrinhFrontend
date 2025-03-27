@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 97vh;
+            background-color: #f4f6f8;
+        }
+        .container {
+            text-align: center;
+            background-color: white;
+            width: 400px;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        input {
+            width: 80%;
+            padding: 8px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        button {
+            padding: 8px 15px;
+            border: none;
+            border-radius: 5px;
+            background-color: #007bff;
+            color: white;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="container" id="nameForm">
+        <h1>Nhập tên của bạn</h1>
+        <input type="text" id="input" placeholder="Nhập tên...">
+        <button onclick="saveName()">Lưu</button>
+    </div>
+    <div class="container" id="greeting" style="display: none;">
+        <h2 id="welcomeMessage"></h2>
+        <button onclick="resetName()">Đổi tên</button>
+    </div>
+
+    <script>
+        function saveName() {
+            let name = document.getElementById("input").value.trim();
+            if (name) {
+                localStorage.setItem("username", JSON.stringify(name));
+                displayGreeting();
+            }
+        }
+        function displayGreeting() {
+            let storedName = JSON.parse(localStorage.getItem("username"));
+            if (storedName) {
+                document.getElementById("nameForm").style.display = "none";
+                document.getElementById("greeting").style.display = "block";
+                document.getElementById("welcomeMessage").textContent = `👋 Chào bạn, ${storedName}!`;
+            }
+        }
+
+        function resetName() {
+            localStorage.removeItem("username");
+            document.getElementById("nameForm").style.display = "block";
+            document.getElementById("greeting").style.display = "none";
+        }
+        displayGreeting();
+    </script>
+</body>
+</html>

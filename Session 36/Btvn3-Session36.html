@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            text-align: center;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        div {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 30px;
+        }
+        button {
+            font-size: 18px;
+            color: white;
+            width: 80px;
+            height: 35px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        #red {
+            background-color: #e74c3c;
+        }
+        #blue {
+            background-color: #3498db;
+        }
+        #yellow {
+            color: black;
+            background-color: #f1c40f;
+        }
+        #purple {
+            background-color: #9b59b6;
+        }
+    </style>
+</head>
+<body id="background">
+    <h1>Chọn màu nền bạn yêu thích</h1>
+    <div class="content">
+        <button id="red">Đỏ</button>
+        <button id="blue">Xanh</button>
+        <button id="yellow">Vàng</button>
+        <button id="purple">Tím</button>
+    </div>
+    <p>Trang sẽ ghi nhớ màu bạn đã chọn kể cả khi tải lại!</p>
+    <script>
+        let bg = document.getElementById("background");
+        let savedColor = localStorage.getItem("bgColor");
+        if (savedColor) {
+            bg.style.backgroundColor = savedColor;
+        }
+        document.querySelectorAll(".content button").forEach((button) => {
+            button.addEventListener("click", () => {
+                let color = button.id;
+                bg.style.backgroundColor = color;
+                localStorage.setItem("bgColor", color);
+            });
+        });
+    </script>
+</body>
+</html>

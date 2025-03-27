@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <style>
+        body{
+            text-align: center;
+            background-color: #f4f6f8;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        h2{
+            margin: 0px;
+        }
+
+        .dad{
+            display: flex;
+            flex-direction: column;
+            justify-items: center;
+            align-items: center;
+            gap: 30px;
+        }
+
+        .child{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: auto;
+            background-color: white;
+            text-align: left;
+            border-radius: 10px;
+            height: 150px;
+            width: 400px;
+            gap: 70px;
+            padding: 10px;
+        }
+
+        .food{
+            border-radius: 10px;
+            width: 150px;
+            height: 120px;
+        }
+
+        button{
+            background-color: #28a745;
+            color: white;
+            border: none;
+            width: 80px;
+            height: 30px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h1>Bạn thích món nào nhất? 🍲</h1>
+    <div class="dad" id="dad"></div>
+
+    <script>
+        let Menu = JSON.parse(localStorage.getItem("Menu")) || [
+            { name: "Bánh bông lan", image: "https://cdn.tgdd.vn/2021/04/CookProduct/1200-1200x676-8.jpg", likes: 0 },
+            { name: "Phở bò Hà Nội", image: "https://cdn3.ivivu.com/2023/08/m%C3%B3n-%C4%83n-Vi%E1%BB%87t-Nam-ivivu-370x215.jpeg", likes: 0 },
+            { name: "Cơm tấm Sài Gòn", image: "https://dacsan4phuong.vn/timthumb.php?src=https://dacsan4phuong.vn/images/contents/thumbnail-dac-san-mien-tay-com-tam-sai-gon-1679027731.jpg&h=245&w=350", likes: 0 }
+        ];
+
+        function renderMenu() {
+            let dad = document.getElementById("dad");
+            dad.innerHTML = "";
+
+            Menu.forEach((food, index) => {
+                dad.innerHTML += `
+                    <div class="child">
+                        <div><img class="food" src="${food.image}" alt=""></div>
+                        <div>
+                            <h2>${food.name}</h2>
+                            <p><span><i class="fa-solid fa-heart" style="color: #ff0000;"></i> <span id="likeCount-${index}">${food.likes}</span> lượt thích</span></p>
+                            <button class="like-btn" data-id="${index}">Thích +1</button>
+                        </div>
+                    </div>
+                `;
+            });
+            document.querySelectorAll(".like-btn").forEach(button => {
+                button.addEventListener("click", function() {
+                    let index = this.getAttribute("data-id");
+                    Menu[index].likes++;
+                    localStorage.setItem("Menu", JSON.stringify(Menu));
+                    document.getElementById(`likeCount-${index}`).innerText = Menu[index].likes;
+                });
+            });
+        }
+
+        renderMenu();
+    </script>
+</body>
+</html>
